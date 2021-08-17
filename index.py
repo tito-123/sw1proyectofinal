@@ -35,7 +35,7 @@ def get_countries():
 
     response = requests.get("https://www.cymath.com/ajax/get_steps.php", headers=headers, params=params,
                             cookies=cookies)
-    primera="<html><head><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script></head><body>"
+    primera="<html><head><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script></head><body><div  class='math'>mi ecuacion: \["+pregunta+"\]</div>"
     segunda= "</body></html>"
 
     return html.unescape(primera + response.text +segunda)
